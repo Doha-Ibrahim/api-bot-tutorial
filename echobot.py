@@ -16,7 +16,7 @@ from sse_starlette.sse import ServerSentEvent
 
 class EchoBot(PoeBot):
     async def get_response(self, query: QueryRequest) -> AsyncIterable[ServerSentEvent]:
-        last_message = query.query[-1].content
+        last_message = "hi"
         yield self.text_event(last_message)
 
 
